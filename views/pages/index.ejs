@@ -8,7 +8,15 @@
             <div class="container-fluid text-sm-center p-5 bg-info">
                 <h1>Node com EJS</h1>
                 <p>Vamos aprender a trabalhor com arquivos EJS</p>
+                <p><%= subtitle %></p>
             </div>  
+            <ul>
+                <% qualities.forEach(function(quality){ %>
+                     <li>
+                        <strong><%=quality.title%></strong><%= quality.message%>
+                    </li>
+               <% }) %>
+               
         </main>
 
         <%- include('../partials/footer'); %>
